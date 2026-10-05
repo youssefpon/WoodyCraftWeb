@@ -1,0 +1,177 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="BDD WoodyCraft" id="woodycraft-bdd">
+    <mxGraphModel dx="1414" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" parent="1" style="swimlane;fontStyle=1;horizontal=1;startSize=28;collapsible=0;fillColor=#f5f5f5;strokeColor=#666666;" value="CATEGORIE" vertex="1">
+          <mxGeometry height="76" width="220" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="t1a" parent="t1" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=1;" value="id (PK)" vertex="1">
+          <mxGeometry height="24" width="220" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t1b" parent="t1" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="nom" vertex="1">
+          <mxGeometry height="24" width="220" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" parent="1" style="swimlane;fontStyle=1;horizontal=1;startSize=28;collapsible=0;fillColor=#fff2cc;strokeColor=#d6b656;" value="PUZZLE" vertex="1">
+          <mxGeometry height="220" width="220" x="700" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="t2a" parent="t2" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=1;" value="id (PK)" vertex="1">
+          <mxGeometry height="24" width="220" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t2b" parent="t2" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="nom" vertex="1">
+          <mxGeometry height="24" width="220" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t2c" parent="t2" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="description" vertex="1">
+          <mxGeometry height="24" width="220" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="t2d" parent="t2" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="prix" vertex="1">
+          <mxGeometry height="24" width="220" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="t2e" parent="t2" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="nb_pieces" vertex="1">
+          <mxGeometry height="24" width="220" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="t2f" parent="t2" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="essence_bois" vertex="1">
+          <mxGeometry height="24" width="220" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="t2g" parent="t2" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="image" vertex="1">
+          <mxGeometry height="24" width="220" y="172" as="geometry" />
+        </mxCell>
+        <mxCell id="t2h" parent="t2" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=2;" value="id_categorie (FK)" vertex="1">
+          <mxGeometry height="24" width="220" y="196" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" parent="1" style="swimlane;fontStyle=1;horizontal=1;startSize=28;collapsible=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="UTILISATEUR" vertex="1">
+          <mxGeometry height="148" width="220" x="40" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="t3a" parent="t3" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=1;" value="id (PK)" vertex="1">
+          <mxGeometry height="24" width="220" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t3b" parent="t3" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="email (unique)" vertex="1">
+          <mxGeometry height="24" width="220" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t3c" parent="t3" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="mot_de_passe (haché)" vertex="1">
+          <mxGeometry height="24" width="220" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="t3d" parent="t3" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="nom" vertex="1">
+          <mxGeometry height="24" width="220" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="t3e" parent="t3" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="role (client / admin)" vertex="1">
+          <mxGeometry height="24" width="220" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="t4" parent="1" style="swimlane;fontStyle=1;horizontal=1;startSize=28;collapsible=0;fillColor=#f5f5f5;strokeColor=#666666;" value="PANIER" vertex="1">
+          <mxGeometry height="100" width="220" x="370" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="t4a" parent="t4" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=1;" value="id (PK)" vertex="1">
+          <mxGeometry height="24" width="220" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t4b" parent="t4" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=2;" value="id_utilisateur (FK, unique)" vertex="1">
+          <mxGeometry height="24" width="220" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t4c" parent="t4" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="mis_a_jour" vertex="1">
+          <mxGeometry height="24" width="220" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="t5" parent="1" style="swimlane;fontStyle=1;horizontal=1;startSize=28;collapsible=0;fillColor=#f5f5f5;strokeColor=#666666;" value="LIGNE_PANIER" vertex="1">
+          <mxGeometry height="100" width="220" x="700" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="t5a" parent="t5" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=3;" value="id_panier (PK, FK)" vertex="1">
+          <mxGeometry height="24" width="220" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t5b" parent="t5" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=3;" value="id_puzzle (PK, FK)" vertex="1">
+          <mxGeometry height="24" width="220" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t5c" parent="t5" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="quantite" vertex="1">
+          <mxGeometry height="24" width="220" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="t6" parent="1" style="swimlane;fontStyle=1;horizontal=1;startSize=28;collapsible=0;fillColor=#d5e8d4;strokeColor=#82b366;" value="ADRESSE" vertex="1">
+          <mxGeometry height="172" width="220" x="40" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="t6a" parent="t6" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=1;" value="id (PK)" vertex="1">
+          <mxGeometry height="24" width="220" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t6b" parent="t6" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="nom_complet" vertex="1">
+          <mxGeometry height="24" width="220" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t6c" parent="t6" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="rue" vertex="1">
+          <mxGeometry height="24" width="220" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="t6d" parent="t6" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="code_postal" vertex="1">
+          <mxGeometry height="24" width="220" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="t6e" parent="t6" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="ville" vertex="1">
+          <mxGeometry height="24" width="220" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="t6f" parent="t6" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=2;" value="id_utilisateur (FK)" vertex="1">
+          <mxGeometry height="24" width="220" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="t7" parent="1" style="swimlane;fontStyle=1;horizontal=1;startSize=28;collapsible=0;fillColor=#f8cecc;strokeColor=#b85450;" value="COMMANDE" vertex="1">
+          <mxGeometry height="172" width="220" x="370" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="t7a" parent="t7" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=1;" value="id (PK)" vertex="1">
+          <mxGeometry height="24" width="220" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t7b" parent="t7" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="date_commande" vertex="1">
+          <mxGeometry height="24" width="220" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t7c" parent="t7" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="total" vertex="1">
+          <mxGeometry height="24" width="220" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="t7d" parent="t7" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="statut" vertex="1">
+          <mxGeometry height="24" width="220" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="t7e" parent="t7" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=2;" value="id_utilisateur (FK)" vertex="1">
+          <mxGeometry height="24" width="220" y="124" as="geometry" />
+        </mxCell>
+        <mxCell id="t7f" parent="t7" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=2;" value="id_adresse (FK)" vertex="1">
+          <mxGeometry height="24" width="220" y="148" as="geometry" />
+        </mxCell>
+        <mxCell id="t8" parent="1" style="swimlane;fontStyle=1;horizontal=1;startSize=28;collapsible=0;fillColor=#f8cecc;strokeColor=#b85450;" value="LIGNE_COMMANDE" vertex="1">
+          <mxGeometry height="124" width="220" x="1000" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="t8a" parent="t8" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=3;" value="id_commande (PK, FK)" vertex="1">
+          <mxGeometry height="24" width="220" y="28" as="geometry" />
+        </mxCell>
+        <mxCell id="t8b" parent="t8" style="text;align=left;verticalAlign=middle;spacingLeft=8;fontStyle=3;" value="id_puzzle (PK, FK)" vertex="1">
+          <mxGeometry height="24" width="220" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="t8c" parent="t8" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="quantite" vertex="1">
+          <mxGeometry height="24" width="220" y="76" as="geometry" />
+        </mxCell>
+        <mxCell id="t8d" parent="t8" style="text;align=left;verticalAlign=middle;spacingLeft=8;" value="prix_unitaire" vertex="1">
+          <mxGeometry height="24" width="220" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="t1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=ERzeroToMany;startArrow=ERmandOne;endFill=0;startFill=0;" target="t2" value="contient">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="t3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=ERzeroToOne;startArrow=ERmandOne;endFill=0;startFill=0;" target="t4" value="possède">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="t4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;" target="t5" value="contient">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="t2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=ERzeroToMany;startArrow=ERmandOne;endFill=0;startFill=0;" target="t5" value="est dans">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="t3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=ERzeroToMany;startArrow=ERmandOne;endFill=0;startFill=0;" target="t6" value="a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="t3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=ERzeroToMany;startArrow=ERmandOne;endFill=0;startFill=0;" target="t7" value="passe">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="450" />
+              <mxPoint x="310" y="646" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="t6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=ERzeroToMany;startArrow=ERmandOne;endFill=0;startFill=0;" target="t7" value="livrée à">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="t7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=ERmany;startArrow=ERmandOne;endFill=0;startFill=0;" target="t8" value="contient">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="t2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;endArrow=ERzeroToMany;startArrow=ERmandOne;endFill=0;startFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="t8" value="est commandé dans">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
