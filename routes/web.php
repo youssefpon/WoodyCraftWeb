@@ -1,23 +1,16 @@
 <?php
 
+use App\Http\Controllers\CategorieController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PuzzleController;
+use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+// Page d'accueil (visible par tout le monde) - US #13
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Page d'une catégorie - US #18
+Route::get('/categories/{categorie}', [CategorieController::class, 'show'])->name('categories.show');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,6 +22,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('puzzles', PuzzleController::class)->middleware('auth');
+// Gestion des puzzles : réservée à l'admin (middleware 'admin' à enregistrer dans Kernel.php)
+Route::resource('puzzles', PuzzleController::class)->middleware(['auth', 'admin']);
 
 require __DIR__.'/auth.php';
