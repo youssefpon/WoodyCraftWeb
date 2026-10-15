@@ -29,13 +29,13 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-    
+        // Admin -> gestion des puzzles, client -> page d'accueil
         if ($request->user()->role === 'admin') {
-        return redirect()->route('puzzles.index');
-    }
+            return redirect()->route('puzzles.index');
+        }
 
-    return redirect()->route('show.blade.php');
-}
+        return redirect()->route('home');
+    }
 
     /**
      * Destroy an authenticated session.
