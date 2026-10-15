@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Route;
 // Page d'accueil (visible par tout le monde) - US #13
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+Route::get('/categories', [CategorieController::class, 'index'])->name('categories.index');
+
 // Page d'une catégorie - US #18
 Route::get('/categories/{categorie}', [CategorieController::class, 'show'])->name('categories.show');
 

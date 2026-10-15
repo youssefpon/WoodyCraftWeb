@@ -56,7 +56,7 @@
     <header>
         <a class="logo" href="{{ route('home') }}">WoodyCraft</a>
         <nav>
-            <a href="{{ route('home') }}">Catégories</a>
+            <a href="{{ route('categories.index') }}" class="btn">Catégories</a>
 
             @auth
                 @if (Auth::user()->role === 'admin')

@@ -13,4 +13,11 @@ class CategorieController extends Controller
 
         return view('categorie', compact('categorie', 'puzzles'));
     }
+
+    public function index()
+    {
+    $categories = Puzzle::select('categorie')->distinct()->orderBy('categorie')->pluck('categorie');
+
+    return view('categories', compact('categories'));
+    }
 }
